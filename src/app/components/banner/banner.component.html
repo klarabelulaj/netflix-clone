@@ -1,0 +1,40 @@
+<div class="banner">
+  
+  <ng-container *ngIf="!movie; else moviePreview">
+    <video autoplay muted loop class="banner-video">
+      <source src="/videoBanner.mp4" type="video/mp4" />
+    </video>
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <div class="banner-title">
+        <span class="reklam-img"><img src="/reklama.jpg"></span>
+        <p>Squid Game: Unleashed</p>
+      </div>
+      <p class="banner-description">
+        Mobile Game action. <br />
+        Included with your membership...
+      </p>
+      <div class="banner-buttons">
+        <button class="banner-button">
+          <span class="material-symbols-outlined">mobile</span>
+          Get Mobile Game
+        </button>
+        <button class="banner-button banner-button-secondary">
+          <span class="material-symbols-outlined">send</span>
+          Send to My Mobile Device
+        </button>
+      </div>
+    </div>
+  </ng-container>
+
+  <!--  Movie preview template -->
+  <ng-template #moviePreview>
+    <div class="banner-preview">
+      <img [src]="movie.imageUrl" alt="{{ movie.title }}" />
+      <div class="banner-content">
+        <h1>{{ movie.title }}</h1>
+        <p class="banner-description">{{ movie.description }}</p>
+      </div>
+    </div>
+  </ng-template>
+</div>

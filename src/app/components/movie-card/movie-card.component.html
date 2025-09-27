@@ -1,0 +1,20 @@
+<div class="movie-card"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()">
+
+
+
+  <img [src]="imageUrl" alt="{{ title }}" />
+
+  <div class="hover-overlay">
+    <h3>{{ title }}</h3>
+    <div class="icons">
+      <button><span class="material-symbols-outlined">play_arrow</span></button>
+      <button><span class="material-symbols-outlined">add</span></button>
+      <button><span class="material-symbols-outlined">thumb_up</span></button>
+      <button><span class="material-symbols-outlined">expand_more</span></button>
+    </div>
+    <p class="info">{{ age }} | {{ seasons }} | HD</p>
+    <p class="tags">{{ tags }}</p>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+.row {
+  margin: 40px 0; 
+}
+
+.row h2 {
+  color: #ffffff;
+  margin-left: 40px;
+  margin-bottom: 0px;
+  font-size: 18px;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+.row-cards {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding:20px;
+  padding-top: 0px;
+  margin-left: 20px;
+}
+
+.row-cards::-webkit-scrollbar {
+  display: none;
+}
+.row-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-arrow {
+  position: absolute;
+  
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  opacity: 0; 
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.scroll-arrow.left {
+  left: 0;
+}
+
+.scroll-arrow.right {
+  right: 0; 
+}
+.scroll-arrow .material-symbols-outlined {
+  font-size: 30px;
+}
+
+.row-wrapper:hover .scroll-arrow {
+  opacity: 1;
+  pointer-events: auto;
+}

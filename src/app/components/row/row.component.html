@@ -1,0 +1,30 @@
+<div class="row">
+    <h2>{{ title }}</h2>
+    <div class="row-wrapper">
+
+   
+    <div class="row-cards" #scrollContainer>
+        <app-movie-card
+        *ngFor="let movie of movies"
+        [imageUrl]="movie.imageUrl"
+        [title]="movie.title"
+        [description]="movie.description"
+        [age]="movie.age"
+        [seasons]="movie.seasons"
+        [tags]="movie.tags"
+        (previewMovie)="handlePreviewMovie($event)">
+    </app-movie-card>
+</div>
+
+<button class="scroll-arrow left" (click)="scrollLeft()">
+    <span class="material-symbols-outlined">chevron_left</span>
+</button>
+
+<button class="scroll-arrow right" (click)="scrollRight()">
+    <span class="material-symbols-outlined">chevron_right</span>
+</button>
+
+</div>
+</div>
+
+
